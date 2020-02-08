@@ -1,20 +1,3 @@
-/*
- * Copyright (c) 2020, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
- *
- * WSO2 Inc. licenses this file to you under the Apache License,
- * Version 2.0 (the "License"); you may not use this file except
- * in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 package sample.custom.authenticator.qdi;
 
 import org.apache.commons.logging.Log;
@@ -30,18 +13,19 @@ import org.wso2.carbon.identity.application.authentication.framework.util.Framew
 import org.wso2.carbon.identity.application.common.model.User;
 
 import java.io.IOException;
-import java.io.Serializable;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-public class CustomQDIAuthenticator extends AbstractApplicationAuthenticator implements QDIClient,
+public class CustomQDIAuthenticator extends AbstractApplicationAuthenticator implements
         LocalApplicationAuthenticator {
 
     private static final long serialVersionUID = 3365604122818036200L;
     private static Log log = LogFactory.getLog(CustomQDIAuthenticator.class);
-    private QDIClient implementer = new QDI_JavaClient();
+
+   // private static QDIClient qdiClient = new QDIJavaClient();
+    private static QDIClient qdiClient = new QDIMockClient();
 
     @Override
     protected void initiateAuthenticationRequest(HttpServletRequest request,
@@ -63,9 +47,9 @@ public class CustomQDIAuthenticator extends AbstractApplicationAuthenticator imp
             if (context.isRetrying()) {
                 retryParam = "&authFailure=true&authFailureMsg=login.fail.message";
             }
-
+            // TODO: 2/7/20 put debug logs when create url
             response.sendRedirect(response.encodeRedirectURL(loginPage + ("?" + queryParams)) +
-                    "&authenticators=BasicAuthenticator:" + "LOCAL" + retryParam);
+                    "&authenticators=" + getName() +":LOCAL" + retryParam);
         } catch (IOException e) {
             throw new AuthenticationFailedException(e.getMessage(), e);
         }
@@ -73,8 +57,6 @@ public class CustomQDIAuthenticator extends AbstractApplicationAuthenticator imp
 
     /**
      * This method is used to process the authentication response.
-     * Inside here we check if this is a authentication request coming from oidc flow and then check if the user is
-     * in the 'photoSharingRole'.
      */
     @Override
     protected void processAuthenticationResponse(HttpServletRequest request,
@@ -83,26 +65,19 @@ public class CustomQDIAuthenticator extends AbstractApplicationAuthenticator imp
 
         String username = request.getParameter(CustomQdiAuthenticatorConstants.USER_NAME);
         String password = request.getParameter(CustomQdiAuthenticatorConstants.PASSWORD);
-        boolean isAuthenticated = true;
-        context.setSubject(AuthenticatedUser.createLocalAuthenticatedUserFromSubjectIdentifier(username));
-        boolean authorization = false;
+        boolean isAuthenticated;
 
-        if (isAuthenticated) {
+        isAuthenticated = qdiClient.qdiAuthenticate(username, password);
 
-            authorization = implementer.qdiAuthenticator(username, password);
-
-        } else {
-            // others scenarios are not verified.
-            authorization = false;
-        }
-
-        if (!authorization) {
-            log.error("user authorization is failed.");
-
+        if (!isAuthenticated) {
+            if (log.isDebugEnabled()) {
+                log.debug("User authentication is failed due to invalid credentials for user : " + username);
+            }
             throw new InvalidCredentialsException("User authentication failed due to invalid credentials",
                     User.getUserFromUserName(username));
-
         }
+        context.setSubject(AuthenticatedUser.createLocalAuthenticatedUserFromSubjectIdentifier(username));
+
     }
 
     @Override
@@ -113,19 +88,17 @@ public class CustomQDIAuthenticator extends AbstractApplicationAuthenticator imp
 
     public String getFriendlyName() {
 
-        //Set the name to be displayed in local authenticator drop down lsit
+        //Set the name to be displayed in local authenticator drop down list
         return CustomQdiAuthenticatorConstants.AUTHENTICATOR_FRIENDLY_NAME;
     }
 
     @Override
+    // TODO: 2/7/20 check the canHandle with latest code
     public boolean canHandle(HttpServletRequest httpServletRequest) {
 
         String userName = httpServletRequest.getParameter(CustomQdiAuthenticatorConstants.USER_NAME);
         String password = httpServletRequest.getParameter(CustomQdiAuthenticatorConstants.PASSWORD);
-        if (userName != null && password != null) {
-            return true;
-        }
-        return false;
+        return userName != null && password != null;
     }
 
     @Override
@@ -138,12 +111,6 @@ public class CustomQDIAuthenticator extends AbstractApplicationAuthenticator imp
     public String getName() {
 
         return CustomQdiAuthenticatorConstants.AUTHENTICATOR_NAME;
-    }
-
-    @Override
-    public boolean qdiAuthenticator(String username, String password) {
-
-        return false;
     }
 
 }

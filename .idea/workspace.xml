@@ -1,21 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8353d09f-da15-4061-b486-a80b548ae172" name="Default Changelist" comment="" />
+    <list default="true" id="8353d09f-da15-4061-b486-a80b548ae172" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/HelloWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/HelloWorldImplService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/QDIMockClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/CustomQDIAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/CustomQDIAuthenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/CustomQdiAuthenticatorConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/CustomQdiAuthenticatorConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/QDIClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/QDIClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/QDI_JavaClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/QDIJavaClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/QDI_MockClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/QDI_Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/QDIServerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/internal/CustomBasicAuthQDIServiceComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/internal/CustomBasicAuthQDIServiceComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/custom/authenticator/qdi/CustomQDIAuthenticator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/custom/authenticator/qdi/CustomQDIAuthenticator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/custom/authenticator/qdi/CustomQdiAuthenticatorConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/custom/authenticator/qdi/CustomQdiAuthenticatorConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/custom/authenticator/qdi/QDIClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/custom/authenticator/qdi/QDIClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/custom/authenticator/qdi/QDI_JavaClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/custom/authenticator/qdi/QDI_MockClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/custom/authenticator/qdi/QDI_Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/custom/authenticator/qdi/internal/CustomBasicAuthQDIServiceComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/custom/authenticator/qdi/internal/CustomBasicAuthQDIServiceComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/org.wso2.custom.authenticator.qdi-1.0.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scr-plugin-generated/OSGI-INF/metatype/metatype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scr-plugin-generated/OSGI-INF/metatype/metatype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scr-plugin-generated/OSGI-INF/scr-plugin/scrinfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scr-plugin-generated/OSGI-INF/scr-plugin/scrinfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scr-plugin-generated/OSGI-INF/serviceComponents.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scr-plugin-generated/OSGI-INF/serviceComponents.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XM9f3MMkkq8PDBKi05OFQoQiqD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -29,7 +71,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.QDIMockClient">
+    <configuration name="QDIMockClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.custom.authenticator.qdi.QDIMockClient" />
+      <module name="custom-auth-requestpath-custom-basicauth" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.custom.authenticator.qdi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="Remote" nameIsGenerated="true">
       <module name="custom-auth-requestpath-custom-basicauth" />
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -44,6 +99,11 @@
       </RunnerSettings>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.QDIMockClient" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -56,55 +116,66 @@
       <option name="presentableId" value="Default" />
       <updated>1580845195984</updated>
       <workItem from="1580845199274" duration="11257000" />
-      <workItem from="1580904069716" duration="878000" />
+      <workItem from="1580904069716" duration="19750000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/CustomQDIAuthenticator.java</url>
-          <line>51</line>
+          <line>35</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/CustomQDIAuthenticator.java</url>
-          <line>91</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/CustomQDIAuthenticator.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/CustomQDIAuthenticator.java</url>
-          <line>66</line>
+          <line>50</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/internal/CustomBasicAuthQDIServiceComponent.java</url>
-          <line>49</line>
+          <line>20</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/internal/CustomBasicAuthQDIServiceComponent.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/QDI_JavaClient.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/QDIJavaClient.java</url>
           <line>7</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/CustomQDIAuthenticator.java</url>
-          <line>84</line>
+          <line>66</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/QDIMockClient.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/CustomQDIAuthenticator.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/custom/authenticator/qdi/CustomQDIAuthenticator.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

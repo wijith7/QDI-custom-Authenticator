@@ -4,5 +4,5 @@ import java.io.Serializable;
 
 public interface QDIClient extends Serializable {
 
-    boolean qdiAuthenticator(String username, String password);
+    boolean qdiAuthenticate(String username, String password);
 }
